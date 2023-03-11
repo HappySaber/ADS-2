@@ -29,14 +29,14 @@ double expn(double x, uint16_t count) {
 }
 double sinn(double x, uint16_t count) {
     double sinx = x;
-    for (uint16_t i = 2; i < count; i++) {
+    for (uint16_t i = 2; i <= count; i++) {
         sinx = sinx + calcItem(x, 2 * i - 1) * pown(-1, i - 1);
     }
     return sinx;
 }
 double cosn(double x, uint16_t count) {
     double cosx = 1;
-    for (uint16_t i = 2; i < count; i++) {
+    for (uint16_t i = 2; i <= count; i++) {
         cosx = cosx + calcItem(x, 2 * i - 2) * pown(-1, i - 1);
     }
     return cosx;
